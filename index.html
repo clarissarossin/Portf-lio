@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Clarissa Rossin | Dados, automação e landing pages para projetos pequenos</title>
+<meta name="description" content="Organizo dados, automatizo coletas, crio relatórios e landing pages para projetos pequenos e objetivos.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;700;800&display=swap">
+<style>
+:root{--bg:#f4f7fb;--surf:#fff;--ink:#0b1a30;--mut:#4d6080;--line:#d6dfec;--cy:#0a7f9c;--navy:#060d1b;--deep:#0f2a52;--cyan:#22d3ee;--mono:'JetBrains Mono',ui-monospace,Menlo,monospace;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#060d1b;--surf:#0c1a31;--ink:#e7eef8;--mut:#93a6c2;--line:#1b2f50;--cy:#22d3ee}}
+:root[data-theme="dark"]{--bg:#060d1b;--surf:#0c1a31;--ink:#e7eef8;--mut:#93a6c2;--line:#1b2f50;--cy:#22d3ee}
+*,*::before,*::after{box-sizing:inherit;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
+body{font:400 1rem/1.65 Manrope,system-ui,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+a{color:inherit}.wrap{max-width:1080px;margin:auto;padding:0 20px}
+h1,h2,h3{line-height:1.15;letter-spacing:-.02em}h2{font-size:clamp(1.6rem,4vw,2.3rem);margin-bottom:.6rem}
+.k{font:500 .75rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--cy)}
+.sec{padding:clamp(56px,9vw,104px) 0}.lead{color:var(--mut);max-width:60ch}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--navy);border-bottom:1px solid transparent;transition:border-color .3s}
+header.sc{border-color:#1b2f50}
+.hd{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:4px 24px;padding:14px 0;color:#e7eef8}
+a{text-decoration: none;}
+.logo{font-weight:800;text-decoration:none}.logo i{color:var(--cyan);font-style:normal}
+nav{display:flex;gap:20px;font-size:.88rem}nav a{text-decoration:none;color:#93a6c2;padding:2px 0;border-bottom:1px solid transparent;transition:.2s}
+nav a:hover{color:#fff;border-color:var(--cyan)}
+.hero{background:radial-gradient(800px 380px at 88% 0,#123668 0,transparent 65%),var(--navy);color:#e7eef8;padding:clamp(56px,10vw,120px) 0}
+.hero .wrap{display:grid;gap:48px;align-items:center}@media(min-width:860px){.hero .wrap{grid-template-columns:1.25fr 1fr}}
+.hero h1{font-size:clamp(2.1rem,6vw,3.6rem);margin:14px 0 18px}.hero p{color:#aab9d0;max-width:52ch}
+.hero .k{color:var(--cyan)}.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.b{display:inline-block;padding:12px 22px;border-radius:8px;font-weight:700;font-size:.95rem;text-decoration:none;border:1px solid var(--cyan);transition:.2s}
+.b1{background:var(--cyan);color:#04202a}.b1:hover{background:#fff;border-color:#fff}.b2{color:var(--cyan)}.b2:hover{background:rgba(34,211,238,.1)}
+.term{font:.8rem/1.9 var(--mono);background:rgba(12,26,49,.8);border:1px solid #1b2f50;border-radius:12px;padding:20px 22px;color:#93a6c2}
+.term b{color:var(--cyan);font-weight:500;display:inline-block;width:12ch}.term em{font-style:normal;color:#e7eef8}.term hr{border:0;border-top:1px dashed #1b2f50;margin:8px 0}
+.grid{display:grid;gap:16px;margin-top:32px}@media(min-width:700px){.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}}
+.card{background:var(--surf);border:1px solid var(--line);border-radius:12px;padding:24px;transition:.25s}.card:hover{border-color:var(--cy);transform:translateY(-2px)}
+.card h3{font-size:1.1rem;margin-bottom:8px}.card p{color:var(--mut);font-size:.95rem}.card .t{display:block;margin-top:14px;font:.72rem var(--mono);color:var(--cy)}
+.card ul{margin:10px 0 0;padding-left:1.1em;color:var(--mut);font-size:.9rem}.card li::marker{color:var(--cy)}
+.note{margin-top:24px;font-size:.88rem;color:var(--mut)}
+details.case{background:var(--surf);border:1px solid var(--line);border-radius:14px;margin-top:16px;transition:border-color .25s}
+details.case:hover,details.case[open]{border-color:var(--cy)}
+summary{list-style:none;cursor:pointer;display:grid;gap:20px;padding:22px}summary::-webkit-details-marker{display:none}
+@media(min-width:760px){summary{grid-template-columns:230px 1fr;align-items:center}}
+.pv{height:112px;border-radius:8px;background:var(--bg);border:1px solid var(--line);padding:10px;display:flex;flex-direction:column;justify-content:space-between;font:.6rem var(--mono);color:var(--mut)}
+.pv s{display:block;text-decoration:none;height:30px;background:repeating-linear-gradient(var(--line) 0 5px,transparent 5px 10px)}
+.pv .h{display:flex;justify-content:space-between;color:var(--cy)}.pv .bars{display:flex;align-items:flex-end;gap:6px;height:56px}.pv .bars i{flex:1;background:var(--line);border-top:2px solid var(--cy)}
+.pv .sw{display:flex;gap:5px;height:34px}.pv .sw i{flex:1;border-radius:4px}
+.tg{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font:.72rem var(--mono);color:var(--cy)}.tg span:last-child{margin-left:auto}
+summary h3{font-size:1.25rem;margin:6px 0}summary p{color:var(--mut);font-size:.95rem;margin-bottom:10px}
+.mais::after{content:" +"}details[open] .mais::after{content:" −"}
+.body{padding:0 22px 26px;display:grid;gap:22px;border-top:1px solid var(--line);padding-top:24px}@media(min-width:760px){.body{grid-template-columns:1fr 1fr}.body .w{grid-column:1/-1}}
+.body h4{font:500 .75rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--cy);margin-bottom:6px}.body p{color:var(--mut);font-size:.95rem}
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:.85rem}.flow span{border:1px solid var(--line);border-radius:6px;padding:6px 12px}.flow span:not(:last-child)::after{content:"→";margin-left:12px;color:var(--cy)}
+.val{border-left:3px solid var(--cy);padding-left:16px}.sim{font:.75rem var(--mono);color:var(--mut)}
+.steps{counter-reset:s}.steps .card::before{counter-increment:s;content:"0" counter(s);font:500 .85rem var(--mono);color:var(--cy);display:block;margin-bottom:10px}
+.cta{background:radial-gradient(700px 300px at 10% 100%,#123668 0,transparent 65%),var(--navy);color:#e7eef8;text-align:center}
+.cta p{color:#aab9d0;margin:0 auto 28px;max-width:56ch}.cta ul{list-style:none;padding:0;margin:36px 0 0;display:flex;flex-wrap:wrap;gap:10px 32px;justify-content:center;font-size:.9rem;color:#aab9d0}
+.cta li b{font:500 .72rem var(--mono);color:var(--cyan);margin-right:8px}.cta a{text-decoration:none;border-bottom:1px solid #1b2f50}.cta a:hover{border-color:var(--cyan)}
+footer{background:var(--navy);color:#6f84a3;font-size:.8rem;text-align:center;padding:22px 0 28px}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+.js .rv{opacity:0;transform:translateY(14px);transition:opacity .6s,transform .6s}.js .rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.js .rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap hd"><a class="logo" href="#inicio">Clarissa Rossin<i>.</i></a>
+<nav aria-label="Principal"><a href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#projetos">Projetos</a><a href="#processo">Processo</a><a href="#contato">Contato</a></nav></div></header>
+<main>
+<section class="hero" id="inicio"><div class="wrap"><div>
+<span class="k">Clarissa Rossin · profissional independente</span>
+<h1>Transformo problemas confusos em sistemas digitais claros.</h1>
+<p>Dados, automação, web scraping e interfaces digitais para projetos pequenos e objetivos. Você tem um problema específico; eu desenvolvo uma solução específica.</p>
+<div class="btns"><a class="b b1" href="#projetos">Ver projetos</a><a class="b b2" href="#contato">Conversar sobre um projeto</a></div></div>
+<div class="term" aria-hidden="true"><b>entrada</b><em>planilhas, páginas, bases confusas</em><hr><b>tratamento</b><em>limpar · padronizar · validar</em><hr><b>saída</b><em>tabelas, relatórios, páginas</em></div></div></section>
+
+<section class="sec" id="servicos"><div class="wrap">
+<span class="k">O que eu resolvo</span><h2>Problemas que você provavelmente reconhece.</h2>
+<div class="grid g2">
+<div class="card rv"><h3>Dados desorganizados</h3><p>Transformo planilhas e bases confusas em dados limpos, estruturados e fáceis de analisar.</p><span class="t">Você recebe: uma tabela limpa, sem repetições e no mesmo padrão.</span></div>
+<div class="card rv"><h3>Coleta manual de informações</h3><p>Automatizo a coleta de dados públicos para reduzir trabalho repetitivo e organizar informações.</p><span class="t">Você recebe: informações de várias páginas reunidas em uma única planilha.</span></div>
+<div class="card rv"><h3>Relatórios manuais</h3><p>Transformo dados brutos em indicadores, análises e relatórios prontos para uso.</p><span class="t">Você recebe: gráficos claros e tabelas prontas, sem refazer conta toda semana.</span></div>
+<div class="card rv"><h3>Presença digital</h3><p>Crio landing pages profissionais, claras e responsivas para negócios e profissionais.</p><span class="t">Você recebe: uma página profissional, boa no celular, que leva ao seu contato.</span></div></div>
+<h2 style="margin-top:72px">Como posso ajudar</h2>
+<div class="grid g3">
+<div class="card rv"><h3>Web scraping</h3><p>Coleta e organização automatizada de dados públicos.</p><ul><li>Catálogos, preços e produtos</li><li>Informações estruturadas</li><li>Coleta de várias páginas</li><li>Organização em CSV/Excel</li></ul></div>
+<div class="card rv"><h3>Análise de dados</h3><p>Transformação de dados brutos em informação útil.</p><ul><li>Limpeza e tratamento</li><li>Indicadores e agrupamentos</li><li>Análise exploratória</li><li>Gráficos e relatórios Excel</li></ul></div>
+<div class="card rv"><h3>Front-end</h3><p>Landing pages e interfaces simples, profissionais e responsivas.</p><ul><li>Páginas institucionais</li><li>Landing pages e páginas de conversão</li><li>Páginas para profissionais</li><li>Interfaces responsivas</li></ul></div></div>
+<p class="note">Sem preço fechado aqui: cada projeto é avaliado depois de entender o escopo.</p></div></section>
+
+<section class="sec" id="projetos" style="background:var(--surf);border-block:1px solid var(--line)"><div class="wrap">
+<span class="k">Projetos</span><h2>Quatro projetos, do problema à entrega.</h2>
+<p class="lead">São projetos de demonstração, com dados ou clientes simulados, e estão identificados assim. Clique para ver o problema, o que foi entregue e o que muda para o cliente.</p>
+
+
+<details class="case rv"><summary><div class="pv"><div class="h"><span>categoria</span><span>produto</span><span>preço</span><span>estoque</span></div><s></s><span>estrutura da tabela, ilustração</span></div>
+<div><span class="k">Web scraping · Projeto simulado</span><h3><a href="https://github.com/clarissarossin/projeto_01/blob/main/projeto_01.py" target="_blank">Catálogo de loja online em uma só planilha</a></h3><p>Preço, avaliação e estoque de vários produtos reunidos numa tabela, sem copiar e colar página por página.</p><div class="tg"><span>Planilha organizada</span><span>Resumo por categoria</span><span class="mais">Ver case</span></div></div></summary>
+<div class="body"><div><h4>O problema</h4><p>Os dados de cada produto estão em páginas diferentes. Juntar tudo à mão toma tempo e sempre escapa algum erro.</p></div>
+<div><h4>O que eu entrego</h4><p>Uma planilha com categoria, produto, preço, avaliação, estoque e link, mais o preço médio de cada categoria. Se uma página falha na coleta, o sistema tenta de novo antes de desistir.</p></div>
+<div class="w"><h4>Como funciona</h4><div class="flow"><span>Páginas da loja</span><span>Coleta automática</span><span>Dados organizados</span><span>Planilha pronta</span></div></div>
+<div class="val"><h4>O que muda para o cliente</h4><p>Você para de copiar e colar e ganha tempo para outros projetos. Com tudo lado a lado, fica fácil comparar preços, ver o que está com estoque baixo e decidir onde vale ajustar.</p></div>
+<div><h4>Ideal para</h4><p>Lojas e e-commerces que acompanham preços ou catálogos, e quem precisa montar uma lista de produtos a partir de sites públicos.</p></div>
+<p class="sim w">Projeto simulado: feito em uma loja de testes. A coleta vale para dados públicos e respeita as condições de uso de cada site. Ferramentas: Python, Requests, BeautifulSoup e Pandas.</p></div></details>
+
+<details class="case rv"><summary><div class="pv"><div class="h"><span>faturamento</span><span>ilustração</span></div><div class="bars"><i style="height:90%"></i><i style="height:65%"></i><i style="height:50%"></i><i style="height:35%"></i><i style="height:22%"></i></div></div>
+<div><span class="k">Análise de dados · Projeto simulado</span><h3><a href="https://github.com/clarissarossin/Portf-lio/blob/main/projeto_02.py" target="_blank">Relatório vendas automatizado</h3><p>Indicadores, gráficos e um relatório em Excel gerados a partir da sua planilha de vendas.</p><div class="tg"><span>Gráficos claros</span><span>Relatório em Excel</span><span class="mais">Ver case</span></div></div></summary>
+<div class="body"><div><h4>O problema</h4><p>Você tem a planilha de vendas, mas saber quanto vendeu, o que mais vende e como o mês foi exige refazer as contas toda vez.</p></div>
+<div><h4>O que eu entrego</h4><p>Um relatório em Excel com abas organizadas (visão geral, produtos, meses, cidades e vendedores) e gráficos fáceis de ler: faturamento total, ticket médio, ranking de produtos e evolução mês a mês.</p></div>
+<div class="w"><h4>Como funciona</h4><div class="flow"><span>Planilha de vendas</span><span>Contas e conferência</span><span>Indicadores</span><span>Relatório e gráficos</span></div></div>
+<div class="val"><h4>O que muda para o cliente</h4><p>Em vez de refazer as contas a cada fechamento, você atualiza a planilha e recebe o relatório pronto. Sobra tempo e fica claro onde o dinheiro entra: quais produtos, cidades e vendedores sustentam o faturamento.</p></div>
+<div><h4>Ideal para</h4><p>Pequenos negócios com vários produtos, cidades ou vendedores que ainda fazem o fechamento à mão.</p></div>
+<p class="sim w">Projeto simulado: base de vendas fictícia. Ferramentas: Python, Pandas, Matplotlib e OpenPyXL.</p></div></details>
+
+<details class="case rv"><summary><div class="pv"><div class="h"><span>antes</span><span>depois</span></div><s></s><span>base bagunçada → base limpa</span></div>
+<div><span class="k">Análise de dados · Projeto simulado</span><h3><a href="https://github.com/clarissarossin/projeto_03" target="_blank">De uma base bagunçada a números em que você pode confiar</a></h3><p>Uma planilha cheia de erros virou um diagnóstico claro de vendas por produtos, regiões e evolução ao longo do tempo.</p><div class="tg"><span>Base limpa</span><span>Diagnóstico de vendas</span><span class="mais">Ver case</span></div></div></summary>
+<div class="body"><div><h4>O problema</h4><p>Planilhas reais costumam vir bagunçadas. Aqui eram 1.300 registros com linhas repetidas, datas em formatos diferentes, preços escritos de vários jeitos e a mesma cidade com nomes diferentes. Com dados assim, qualquer total sai errado.</p></div>
+<div><h4>O que eu entrego</h4><p>A base limpa e um diagnóstico em tabelas e gráficos: quais produtos vendem muito mas rendem pouco, onde há poucas vendas de valor alto, em quais meses as vendas caíram e se existe uma época do ano mais forte.</p></div>
+<div class="w"><h4>Como funciona</h4><div class="flow"><span>Base bagunçada</span><span>Limpeza</span><span>Perguntas do negócio</span><span>Diagnóstico</span></div></div>
+<div class="val"><h4>O que muda para o cliente</h4><p>Você passa a confiar nos totais e vê o que realmente rende: o produto que mais sai nem sempre é o que mais traz dinheiro. Com isso dá para decidir onde colocar esforço, estoque e divulgação.</p></div>
+<div><h4>Ideal para</h4><p>Quem tem uma planilha antiga, ou preenchida por várias pessoas, e nunca teve certeza de que os totais batem.</p></div>
+<p class="sim w">Projeto simulado: base fictícia criada com problemas propositais. Ferramentas: Python, Pandas e Matplotlib.</p></div></details>
+
+<details class="case rv"><summary><div class="pv"><div class="h"><span>paleta da página</span></div><div class="sw"><i style="background:#EEDAC5"></i><i style="background:#E6BEAE"></i><i style="background:#E29C9C"></i><i style="background:#C9788A"></i><i style="background:#3A2A2A"></i></div><span>cores reais do projeto</span></div>
+<div><span class="k">Front-end · Projeto simulado</span><h3><a href="https://clarissarossin.github.io/projeto_portfolio_jm/" target="_blank">Página web para uma clínica mostrar serviços e receber agendamentos</a>a</h3><p>Apresenta serviços e preços e leva o visitante a agendar pelo WhatsApp.</p><div class="tg"><span>Boa no celular</span><span>Chamada para agendar</span><span class="mais">Ver case</span></div></div></summary>
+<div class="body"><div><h4>O problema</h4><p>Uma clínica precisa passar confiança logo de cara e deixar claro o que faz, quanto custa e como agendar.</p></div>
+<div><h4>O que eu entrego</h4><p>Uma página única, que funciona no celular e no computador: apresentação, cinco serviços com preço inicial, quem está por trás da clínica, os valores do atendimento e botão de WhatsApp com endereço, telefone e horários.</p></div>
+<div class="w"><h4>Como funciona</h4><div class="flow"><span>Conversa sobre a clínica</span><span>Estrutura e textos</span><span>Layout para celular e PC</span><span>Página pronta</span></div></div>
+<div class="val"><h4>O que muda para o cliente</h4><p>O visitante entende o que a clínica oferece em poucos segundos e sempre sabe o próximo passo. A clínica ganha presença profissional além das redes sociais e facilita o contato de quem já decidiu.</p></div>
+<div><h4>Ideal para</h4><p>Clínicas, profissionais autônomos e pequenos negócios que querem uma página própria para apresentar serviços e receber contatos.</p></div>
+<p class="sim w">Projeto simulado: clínica fictícia. Ferramentas: HTML, CSS e JavaScript.</p></div></details>
+</div></section>
+
+<section class="sec" id="processo"><div class="wrap">
+<span class="k">Como funciona</span><h2>Simples e com começo e fim.</h2>
+<div class="grid g4 steps">
+<div class="card rv"><h3>Entendo o problema</h3><p>Um briefing curto e objetivo.</p></div>
+<div class="card rv"><h3>Defino o escopo</h3><p>O que será feito, o que será entregue e o que não faz parte do projeto.</p></div>
+<div class="card rv"><h3>Desenvolvo</h3><p>Execução técnica, com você sabendo em que pé está.</p></div>
+<div class="card rv"><h3>Entrego</h3><p>Arquivos, relatório, código ou página final.</p></div></div>
+<h2 style="margin-top:72px">Por que trabalhar comigo</h2>
+<div class="grid g4">
+<div class="card rv"><h3>Escopo definido</h3><p>Cada projeto tem começo, fim e entregas combinadas.</p></div>
+<div class="card rv"><h3>Comunicação objetiva</h3><p>Perguntas diretas, sem jargão técnico.</p></div>
+<div class="card rv"><h3>Arquivos organizados</h3><p>Código e arquivos estruturados, fáceis de reutilizar.</p></div>
+<div class="card rv"><h3>Foco no problema</h3><p>A tecnologia vem depois de entender o que precisa ser resolvido.</p></div></div></div></section>
+
+<section class="sec cta" id="contato"><div class="wrap">
+<span class="k" style="color:var(--cyan)">Contato</span>
+<h2>Tem um problema específico que precisa ser resolvido?</h2>
+<p>Me conte o que você precisa. Eu avalio o escopo e vejo a melhor forma de transformar o problema em uma solução objetiva.</p>
+<a class="b b1" id="cta" href="https://wa.link/yzyu3h">Falar comigo</a>
+<ul><li><b>WhatsApp</b><a id="wa" href="#contato">[adicionar número]</a></li><li><b>E-mail</b><a id="em" href="#contato">[adicionar e-mail]</a></li><li><b>GitHub</b><a href="https://github.com/clarissarossin" target="_blank" rel="noopener">github.com/clarissarossin</a></li></ul></div></section>
+</main>
+<footer><div class="wrap">© 2026 Clarissa Rossin</div></footer>
+<script>
+/* ===== SEU CONTATO: preencha aqui e salve ===== */
+const CONTATO={whatsapp:"55 (67)99976-2910",email:"clarissafrossin@gmail.com"};
+const $=i=>document.getElementById(i);
+if(CONTATO.whatsapp){$('wa').href='https://wa.link/yzyu3h'+CONTATO.whatsapp;$('wa').textContent='+'+CONTATO.whatsapp;$('cta').href=$('wa').href;$('wa').target=$('cta').target='_blank'}
+if(CONTATO.email){$('em').href='mailto:'+CONTATO.email;$('em').textContent=CONTATO.email;if(!CONTATO.whatsapp)$('cta').href=$('em').href}
+document.documentElement.classList.add('js');
+const h=document.querySelector('header'),f=()=>h.classList.toggle('sc',scrollY>8);f();addEventListener('scroll',f,{passive:true});
+const io='IntersectionObserver' in window?new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.1}):null;
+document.querySelectorAll('.rv').forEach(el=>io?io.observe(el):el.classList.add('in'));
+</script>
+</body>
+</html>
